@@ -2,15 +2,23 @@
 <html lang="en">
 
 <head>
+
     <link rel="icon" href="#" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+    <link rel="icon" href="#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tv Shows</title>
+   
 </head>
 
 <body>
     <form>
+
 
         Search:<br />
         <fieldset id="radiosFieldSet">
@@ -31,6 +39,17 @@
     <script src="fetchByCountry.js"></script>
     <script src="fetchByName.js"></script>
     <script src="index.js"></script>
+
+        <label for="search">Search By Show / Series Name</label>
+        <input type="text" id="search" required>
+        
+        <button id="search-btn" type="submit"> Search </button>
+
+        <output></output>
+    </form>
+
+     <script src="fetchByName.js"></script>
+     <script src="index.js"></script>
 </body>
 
 </html>
