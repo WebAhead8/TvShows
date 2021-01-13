@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="shortcut icon" href="pic/icon.png" />
+    <link rel="icon" href="pic/icon.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Actor</title>
     <link rel="stylesheet" href="style/master.css" />
     <link rel="stylesheet" href="style/actorStyle.css" />
-    
+    <title>Movies</title>
   </head>
   <header>
     <img id="logo" src="pic/logo.png" alt="Website Logo" />
@@ -28,23 +27,18 @@
   </header>
   <body>
     <form>
-      <br />
-      <label for="actor-name">Search Actor : </label> <br />
-      <hr />
-      <input
-        class="input"
-        type="text"
-        id="actor-name"
-        name="actor-name"
-        placeholder="Enter The Name Here..."
-        required
-      />
-      <button id="search-btn" type="submit">Search!</button>
+       <br><br>
+      <label for="movie-name">Search A Movie</label> <br />
+      <input type="text" placeholder="Enter Name ..." id="movie-name" required/>
 
-      <output> </output>
+      <button type="submit">Search</button>
+
+      <output></output>
+
     </form>
 
-    <script src="js/searchActors.js"></script>
+    <script src="js/apiKey.js"></script>
+    <script src="js/movie.js"></script>
   </body>
   <footer>
     <span> &#169; Copyright 2021. All Rights Reserved.</span>
