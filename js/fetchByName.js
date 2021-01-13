@@ -1,4 +1,3 @@
-
 function fetchByName(searchName) {
   //const searchName = document.querySelector("#search").value;
   let showTitle = document.createElement("h2");
@@ -15,8 +14,9 @@ function fetchByName(searchName) {
     .then((result) => {
       showTitle.textContent = result.name;
       showImg.src = result.image.original;
-      showLang.textContent = result.language;
-      showDate.textContent = result.premiered;
+      showImg.classList.add("imgSize");
+      showLang.textContent = "Language : " + result.language;
+      showDate.textContent = "Rate : " + result.premiered;
       showType.textContent = result.genrescd;
 
       nameOutput.appendChild(showTitle);

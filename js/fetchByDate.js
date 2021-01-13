@@ -19,8 +19,7 @@ function fetchByDate(date) {
         let summary = document.createElement("h5");
         showTitle.textContent = movie._embedded.show.name;
         showImg.src = movie._embedded.show.image?.original || "";
-        showImg.width = "250";
-        showImg.height = "250";
+        showImg.classList.add("imgSize");
         showType.textContent = movie._embedded.show.genres;
         showLang.textContent = movie._embedded.show.language;
 

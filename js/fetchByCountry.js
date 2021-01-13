@@ -16,6 +16,7 @@ function fetchByCountry(country) {
         const image = document.createElement("img");
         image.src = data[i].show.image.original;
         image.alt = "";
+        image.classList.add("imgSize");
         nameOutput.appendChild(image);
 
         const genres = document.createElement("h3");
