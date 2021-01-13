@@ -12,7 +12,7 @@ TV series & Actors API : https://www.tvmaze.com/api .  <br>
 Movies API :                   <br><br>
 
 
-The app is responsive so it's suitable for all types of devices . 
+The app is responsive so it's suitable for all devices types . 
 
 
 Languages : HTML , CSS , JavaScript .
