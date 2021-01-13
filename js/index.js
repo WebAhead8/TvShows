@@ -1,6 +1,5 @@
 const searchForm = document.querySelector("form");
 const nameOutput = document.querySelector("output");
-
 const nameinput = document.querySelector("#inputtext");
 const radios = document.querySelectorAll("#radiosFieldSet input");
 
@@ -21,7 +20,9 @@ radios.forEach((input) => {
 
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
+
   nameOutput.innerHTML = "";
+
   if (searchMethod === "date") {
     // fetch data by data
     fetchByDate(nameinput.value);

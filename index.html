@@ -2,36 +2,39 @@
 <html lang="en">
 
 <head>
-
     <link rel="icon" href="pic/icon.png">
-
-
-    <link rel="icon" href="#" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-    <link rel="icon" href="#">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="style/master.css">
     <title>Tv Shows</title>
-   
 </head>
+<header>
+    <img id="logo" src="pic/logo.png" alt="Website Logo" />
 
+    <h1>WELCOME</h1>
+    <p>
+      To the best place for all tv shows and movies! Checkout the <br />lastest
+      tv shows and search for your favorite tv show, movie and actor.
+    </p>
+
+    <nav class="Nav-bar" id="myTopnav">
+      <span><a href="index.html">HOME</a></span>
+      <span><a href="Movies.html">MOVIES</a></span>
+      <span><a href="Actors.html">ACTORS</a></span>
+      <span><a href="Aboutus.html">ABOUT US</a></span>
+    </nav>
+  </header>
 <body>
+
     <form>
 
-
-        Search:<br />
+        <label>Search By :</label><br />
         <fieldset id="radiosFieldSet">
-            <input name="serachMethod" type="radio" value="name"> name<br />
-            <input name="serachMethod" type="radio" value="language">langauge<br />
-            <input name="serachMethod" type="radio" value="date"> date<br />
-            <input name="serachMethod" type="radio" value="country"> country!<br />
+            <input name="serachMethod" type="radio" value="name" checked> By Name<br />
+            <input name="serachMethod" type="radio" value="date"> By Date<br />
+            <input name="serachMethod" type="radio" value="country"> By Country<br />
         </fieldset>
-        For:
+        
         <input type="text" id="inputtext" name="searchterms">
         <input type="submit" name="SearchSubmit" value="Search">
 
@@ -39,21 +42,13 @@
 
     </form>
     <output></output>
-    <script src="fetchByDate.js"></script>
-    <script src="fetchByCountry.js"></script>
-    <script src="fetchByName.js"></script>
-    <script src="index.js"></script>
+    <script src="js/fetchByDate.js"></script>
+    <script src="js/fetchByCountry.js"></script>
+    <script src="js/fetchByName.js"></script>
+    <script src="js/index.js"></script>
 
-        <label for="search">Search By Show / Series Name</label>
-        <input type="text" id="search" required>
-        
-        <button id="search-btn" type="submit"> Search </button>
-
-        <output></output>
-    </form>
-
-     <script src="fetchByName.js"></script>
-     <script src="index.js"></script>
 </body>
-
+<footer>
+    <span> &#169; Copyright 2021. All Rights Reserved.</span>
+  </footer>
 </html>
