@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="#" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Tv Shows</title>
 </head>
+
 <body>
     <form>
-        <label>Search</label>
-        <input type="text" id="search">
-        <button id="search-btn"> Search </button>
+
+        Search:<br />
+        <fieldset id="radiosFieldSet">
+            <input name="serachMethod" type="radio" value="name"> name<br />
+            <input name="serachMethod" type="radio" value="language">langauge<br />
+            <input name="serachMethod" type="radio" value="date"> date<br />
+            <input name="serachMethod" type="radio" value="country"> country!<br />
+        </fieldset>
+        For:
+        <input type="text" id="inputtext" name="searchterms">
+        <input type="submit" name="SearchSubmit" value="Search">
+
+
+
     </form>
+    <output></output>
+    <script src="fetchByDate.js"></script>
+    <script src="fetchByCountry.js"></script>
+    <script src="fetchByName.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
