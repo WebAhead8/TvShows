@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="pic/icon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actor</title>
+    <link rel="stylesheet" href="style/master.css" />
+    <link rel="stylesheet" href="style/actorStyle.css" />
+    
+  </head>
+  <header>
+    <img id="logo" src="pic/logo.png" alt="Website Logo" />
+
+    <h1>WELCOME</h1>
+    <p>
+      To the best place for all tv shows and movies! Checkout the <br />lastest
+      tv shows and search for your favorite tv show, movie and actor.
+    </p>
+
+    <nav class="Nav-bar" id="myTopnav">
+      <span><a href="index.html">HOME</a></span>
+      <span><a href="">TV SHOWS</a></span>
+      <span><a href="">MOVIES</a></span>
+      <span><a href="Actors.html">ACTORS</a></span>
+      <span><a href="Aboutus.html">ABOUT US</a></span>
+    </nav>
+  </header>
+  <body>
+    <form>
+      <br />
+      <label for="actor-name">Search Actor : </label> <br />
+      <hr />
+      <input
+        class="input"
+        type="text"
+        id="actor-name"
+        name="actor-name"
+        placeholder="Enter The Name Here..."
+        required
+      />
+      <button id="search-btn" type="submit">Search!</button>
+
+      <output> </output>
+    </form>
+
+    <script src="js/searchActors.js"></script>
+  </body>
+  <footer>
+    <span> &#169; Copyright 2021. All Rights Reserved.</span>
+  </footer>
+</html>
