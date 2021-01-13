@@ -5,11 +5,13 @@
 
 With **TYVEE** app you can search for thousands of TV series, movies, and actors.  
 **TYVEE** offers many search options like search by name, country and broadcast date.  
-< /br>
-**TYVEE** app pulls the data from two different APIs with no rate limit.
+
+<br>
+**TYVEE** app pulls the data from two different APIs with no rate limit.  
 TV series & Actors API : https://www.tvmaze.com/api .  
 Movies API :                  . 
-< /br>
+<br>
+
 The app is responsive so it's suitable for all types of devices .
 
 
