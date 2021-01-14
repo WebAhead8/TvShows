@@ -1,5 +1,3 @@
-//const nameOutput = document.querySelector("output");
-//const nameinput = document.querySelector("#inputtext");
 function fetchByDate(date) {
   const formattedData = new Date(date).toISOString().replace(/T.*/, "");
 
@@ -10,15 +8,14 @@ function fetchByDate(date) {
     })
     .then((result) => {
       result.forEach((movie) => {
-        let showTitle = document.createElement("h2");
+        let showTitle = h2();
         let showImg = document.createElement("img");
-        let showType = document.createElement("h5");
-        let showLang = document.createElement("h5");
-        // let showdate = document.createElement("h5");
-        let showPremiered = document.createElement("h5");
-        let summary = document.createElement("h5");
+        let showType = h5();
+        let showLang = h5();
+        let showPremiered = h5();
+        let summary = h5();
         showTitle.textContent = movie._embedded.show.name;
-        showImg.src = movie._embedded.show.image?.original || "";
+        showImg.src = movie._embedded.show.image?.original || "No Image";
         showImg.classList.add("imgSize");
         showType.textContent = movie._embedded.show.genres;
         showLang.textContent = movie._embedded.show.language;
@@ -27,11 +24,9 @@ function fetchByDate(date) {
           "Date premiered " + movie._embedded.show.premiered;
         summary.innerHTML = movie._embedded.show.summary;
 
-        // showdate.textContent = "Date " + movie.airdate;
 
         nameOutput.appendChild(showTitle);
         nameOutput.appendChild(showImg);
-        // nameOutput.appendChild(showdate);
         nameOutput.appendChild(showType);
         nameOutput.appendChild(showLang);
         nameOutput.appendChild(showPremiered);
@@ -39,15 +34,6 @@ function fetchByDate(date) {
       });
     })
     .catch((error) => {
-      console.log(error);
-      if (error.message === "404") {
-        errMsg.classList.add("errorMes")
-        errMsg.textContent = `⚠️ Couldn't find ${searchName}`;
-        nameOutput.appendChild(errMsg);
-      } else {
-        errMsg.classList.add("errorMes")
-        errMsg.textContent = "⚠️ Something went wrong";
-        nameOutput.appendChild(errMsg);
-      }
+      catchError(error);
     });
 }

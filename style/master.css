@@ -190,4 +190,7 @@ input[type="submit"] {
     border-bottom: solid 2px #0b0c10;
     width: 80%;
   }
+  .imgSize {
+    width: 300px;
+  }
 }
