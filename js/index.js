@@ -34,7 +34,7 @@ searchForm.addEventListener("submit", (event) => {
     fetchByName(nameinput.value);
     // fetch by name
   }
-
+  nameinput.value = "";
   //const searchdate = document.querySelector("#date").value;
 });
 
