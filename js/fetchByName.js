@@ -6,7 +6,7 @@ function fetchByName(searchName) {
   let showImg = document.createElement("img");
   let showType = document.createElement("h5");
 
-  fetch(`http://api.tvmaze.com/singlesearch/shows?q=${searchName}`)
+  fetch(`https://api.tvmaze.com/singlesearch/shows?q=${searchName}`)
     .then((response) => {
       if (!response.ok) throw new Error(response.status);
       return response.json();

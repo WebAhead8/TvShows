@@ -3,7 +3,7 @@
 function fetchByDate(date) {
   const formattedData = new Date(date).toISOString().replace(/T.*/, "");
 
-  fetch(`http://api.tvmaze.com/schedule/web?date=${formattedData}`)
+  fetch(`https://api.tvmaze.com/schedule/web?date=${formattedData}`)
     .then((response) => {
       if (!response.ok) throw new Error(response.status);
       return response.json();

@@ -1,7 +1,7 @@
 function fetchByCountry(country) {
   //country code : https://en.wikipedia.org/wiki/ISO_3166-1
 
-  fetch(`http://api.tvmaze.com/schedule?country=${country}`)
+  fetch(`https://api.tvmaze.com/schedule?country=${country}`)
     .then((response) => {
       if (!response.ok) throw new Error(response.status);
       return response.json();
