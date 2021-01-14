@@ -1,22 +1,22 @@
 function fetchByName(searchName) {
-  //const searchName = document.querySelector("#search").value;
-  let showTitle = document.createElement("h2");
-  let showLang = document.createElement("h5");
-  let showDate = document.createElement("h5");
+  let showTitle = h2();
+  let showLang = h5();
+  let showDate = h5();
   let showImg = document.createElement("img");
-  let showType = document.createElement("h5");
+  let showType = h5();
 
   fetch(`https://api.tvmaze.com/singlesearch/shows?q=${searchName}`)
     .then((response) => {
-      if (!response.ok) throw new Error(response.status);
+  //    if (!response.ok) throw new Error(response.status);
       return response.json();
     })
     .then((result) => {
       showTitle.textContent = result.name;
       showImg.src = result.image.original;
+      showImg.alt = "No Image";
       showImg.classList.add("imgSize");
       showLang.textContent = "Language : " + result.language;
-      showDate.textContent = "Rate : " + result.premiered;
+      showDate.textContent = "Release Date : " + result.premiered;
       showType.textContent = result.genrescd;
 
       nameOutput.appendChild(showTitle);
@@ -26,55 +26,6 @@ function fetchByName(searchName) {
       nameOutput.appendChild(showType);
     })
     .catch((error) => {
-      console.log(error);
-      if (error.message === "404") {
-        errMsg.classList.add("errorMes")
-        errMsg.textContent = `⚠️ Couldn't find ${searchName}`;
-        nameOutput.appendChild(errMsg);
-      } else {
-        errMsg.classList.add("errorMes")
-        errMsg.textContent = "⚠️ Something went wrong";
-        nameOutput.appendChild(errMsg);
-      }
+      catchError(error);
     });
-}
-
-function searchByName (){
-    
-    const searchName = document.querySelector('#search').value;
-    let showTitle = document.createElement("h2");
-    let showLang = document.createElement("h5");
-    let showDate = document.createElement("h5");
-    let showImg = document.createElement("img"); 
-    let showType = document.createElement("h5");
-
-    
-
-    fetch(`http://api.tvmaze.com/singlesearch/shows?q=${searchName}`)
-        .then(response => {
-            if (!response.ok) throw new Error(response.status);
-            return response.json();
-        })
-        .then(result => {
-
-            showTitle.textContent = result.name;
-            showImg.src = result.image.original;
-            showLang.textContent = result.language;
-            showDate.textContent = result.premiered;
-            showType.textContent = result.genrescd;
-
-            nameOutput.appendChild(showTitle);
-            nameOutput.appendChild(showImg);
-            nameOutput.appendChild(showLang);
-            nameOutput.appendChild(showDate);
-            nameOutput.appendChild(showType);
-        })
-        .catch(error => {
-            console.log(error);
-            if (error.message === "404") {
-                nameOutput.textContent = `⚠️ Couldn't find ${searchName}`;
-            } else {
-                nameOutput.textContent = "⚠️ Something went wrong";
-            }
-        });
 }
