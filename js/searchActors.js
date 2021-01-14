@@ -18,7 +18,7 @@ searchForm.addEventListener("submit", event => {
     inputBox.value = "";
 
 
-    fetch(`http://api.tvmaze.com/search/people?q=${searchName}`)
+    fetch(`https://api.tvmaze.com/search/people?q=${searchName}`)
         .then(response => {
             if (!response.ok) throw new Error(response.status);
             return response.json()
