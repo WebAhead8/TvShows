@@ -95,7 +95,10 @@ output {
   border-radius: 3px;
   border-style: outset;
 }
-
+.errorMes {
+  color: white;
+  font-size: 40px;
+}
 h2 {
   color: white;
   padding: 5px;

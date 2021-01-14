@@ -40,9 +40,13 @@ function fetchByCountry(country) {
     .catch((error) => {
       console.log(error);
       if (error.message === "404") {
-        output.textContent = `⚠️ Couldn't find "${country}"`;
+        errMsg.classList.add("errorMes")
+        errMsg.textContent = `⚠️ Couldn't find ${searchName}`;
+        nameOutput.appendChild(errMsg);
       } else {
-        output.textContent = "⚠️ Something went wrong";
+        errMsg.classList.add("errorMes")
+        errMsg.textContent = "⚠️ Something went wrong";
+        nameOutput.appendChild(errMsg);
       }
     });
 }

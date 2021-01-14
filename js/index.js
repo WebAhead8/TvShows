@@ -2,6 +2,7 @@ const searchForm = document.querySelector("form");
 const nameOutput = document.querySelector("output");
 const nameinput = document.querySelector("#inputtext");
 const radios = document.querySelectorAll("#radiosFieldSet input");
+let errMsg = document.createElement("h2");
 
 let searchMethod;
 
