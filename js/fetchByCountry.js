@@ -19,19 +19,19 @@ function fetchByCountry(country) {
         image.classList.add("imgSize");
         nameOutput.appendChild(image);
 
-        const genres = document.createElement("h3");
+        const genres = document.createElement("h5");
         genres.textContent = data[i].show.genres;
         nameOutput.appendChild(genres);
 
-        const premiered = document.createElement("h3");
+        const premiered = document.createElement("h5");
         premiered.textContent = data[i].show.premiered;
         nameOutput.appendChild(premiered);
 
-        const rating = document.createElement("h3");
+        const rating = document.createElement("h5");
         rating.textContent = data[i].show.rating.average;
         nameOutput.appendChild(rating);
 
-        const summary = document.createElement("h3");
+        const summary = document.createElement("h5");
         summary.innerHTML = data[i].show.summary;
         nameOutput.appendChild(summary);
       }

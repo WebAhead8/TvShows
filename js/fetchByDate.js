@@ -41,9 +41,13 @@ function fetchByDate(date) {
     .catch((error) => {
       console.log(error);
       if (error.message === "404") {
-        nameOutput.textContent = `⚠️ Couldn't find ${searchName}`;
+        errMsg.classList.add("errorMes")
+        errMsg.textContent = `⚠️ Couldn't find ${searchName}`;
+        nameOutput.appendChild(errMsg);
       } else {
-        nameOutput.textContent = "⚠️ Something went wrong";
+        errMsg.classList.add("errorMes")
+        errMsg.textContent = "⚠️ Something went wrong";
+        nameOutput.appendChild(errMsg);
       }
     });
 }
