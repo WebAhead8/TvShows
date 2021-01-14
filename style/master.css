@@ -132,7 +132,10 @@ label {
   color: white;
   font-size: 30px;
 }
-
+a {
+  text-decoration: none;
+  color:  #66fcf1;
+}
 input[type="text"], input[type="date"] {
   width: 50%;
   padding: 12px 20px;
